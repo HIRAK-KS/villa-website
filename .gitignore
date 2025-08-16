@@ -1,3 +1,1 @@
-# Allow compressed video and images
-videos/hero-video.mp4
-images/backup/
+# All assets are hosted on Cloudflare R2
