@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    <title>Villa - 海沿いの静かな高台でゆったり過ごす贅沢な時間</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-container">
+          <div class="logo">
+            <h1>villa</h1>
+          </div>
+          <nav class="navigation">
+            <ul class="nav-list">
+              <li><a href="#hero">HOME</a></li>
+              <li><a href="#features">FEATURES</a></li>
+              <li><a href="#gallery">GALLERY</a></li>
+              <li><a href="#experiences">EXPERIENCES</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+            </ul>
+          </nav>
+          <button class="hamburger-menu" aria-label="メニューを開く">
+            <!-- SVGアイコンはJavaScriptで動的に挿入されます -->
+          </button>
+          <button class="cta-button">予約</button>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+          <div class="hero-video">
+            <video class="hero-video-element" autoplay muted loop playsinline preload="metadata">
+              <source src="videos/hero-video.mp4" type="video/mp4" />
+              <!-- フォールバック用の画像 -->
+              <img
+                src="images/DSC00101.jpg"
+                alt="Villa with ocean view"
+                class="hero-image"
+                loading="lazy"
+              />
+            </video>
+          </div>
+          <div class="hero-content">
+            <p class="hero-subtitle">Villa in Hokkaido</p>
+            <h2 class="hero-title">海沿いの静かな高台でゆったり過ごす贅沢な時間</h2>
+          </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+          <div class="features-container">
+            <div class="feature-card">
+              <div class="feature-image">
+                <picture>
+                  <source srcset="images/DSC00101.webp" type="image/webp" />
+                  <img src="images/DSC00101.jpg" alt="Villa interior" loading="lazy" />
+                </picture>
+              </div>
+              <div class="feature-content">
+                <p class="feature-label">FEATURED</p>
+                <h3 class="feature-title">癒しと感動のプライベート空間で旅の疲れを癒す</h3>
+                <p class="feature-description">
+                  旅の疲れを癒す、プライベートな空間での特別なひととき。充実した設備と快適なアメニティに囲まれながら、ご家族やパートナーと共に、静かな戸建てヴィラでゆったりとした贅沢な時間をお過ごしいただけます。心身ともに癒され、新たな活力を感じていただける特別な滞在体験をご提供いたします。
+                </p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-image">
+                <picture>
+                  <source srcset="images/DSC00118.webp" type="image/webp" />
+                  <img src="images/DSC00118.jpg" alt="Villa view" loading="lazy" />
+                </picture>
+              </div>
+              <div class="feature-content">
+                <p class="feature-label">FEATURED</p>
+                <h3 class="feature-title">24時間、北海道の絶景を満喫する</h3>
+                <p class="feature-description">
+                  札幌中心部から車で約60分。ホテルでは味わえない壮大な絶景を堪能できる特別な宿泊体験。都会の喧騒から程よい距離にありながら、本格的な北海道の自然美をご満喫いただけます。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gallery Section 1 -->
+        <section id="gallery" class="gallery-section">
+          <div class="gallery-main-image">
+            <picture>
+              <source srcset="images/DJI_0562.webp" type="image/webp" />
+              <img src="images/DJI_0562.jpg" alt="Villa main view" loading="lazy" />
+            </picture>
+          </div>
+          <div class="gallery-carousel" id="gallery1">
+            <div class="carousel-slides">
+              <div class="carousel-slide">
+                <picture>
+                  <source srcset="images/DSC00075.webp" type="image/webp" />
+                  <img src="images/DSC00075.jpg" alt="Gallery image 1" loading="lazy" />
+                </picture>
+              </div>
+              <div class="carousel-slide">
+                <picture>
+                  <source srcset="images/DSC00162.webp" type="image/webp" />
+                  <img src="images/DSC00162.jpg" alt="Gallery image 2" loading="lazy" />
+                </picture>
+              </div>
+              <div class="carousel-slide">
+                <picture>
+                  <source srcset="images/DSC00183.webp" type="image/webp" />
+                  <img src="images/DSC00183.jpg" alt="Gallery image 3" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <!-- カルーセルナビゲーションボタンは現在無効化されています -->
+              <!--
+              <div class="gallery-navigation">
+                <button class="nav-btn prev-btn" id="gallery1-prev">
+                  SVGアイコンはJavaScriptで動的に挿入されます
+                </button>
+                <button class="nav-btn next-btn" id="gallery1-next">
+                  SVGアイコンはJavaScriptで動的に挿入されます
+                </button>
+              </div>
+              -->
+              <button class="view-gallery-btn">View Gallery</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experiences Section -->
+        <section id="experiences" class="experiences-section">
+          <div class="section-title">
+            <h2>Experiences</h2>
+          </div>
+          <div class="experiences-container">
+            <div class="experience-card">
+              <div class="experience-image">
+                <picture>
+                  <source srcset="images/223313.webp" type="image/webp" />
+                  <img src="images/223313.jpg" alt="Ocean view" loading="lazy" />
+                </picture>
+              </div>
+              <div class="experience-content">
+                <p class="experience-label">EXPERIENCE THE VIEW</p>
+                <h3 class="experience-title">オーシャンビューの絶景</h3>
+                <p class="experience-description">
+                  朝、夕、夜で異なる感動を与えてくれるオーシャンビュー。ずっと見ていても飽きさせない魅力がそこにあります。
+                </p>
+                <button class="experience-btn">View Gallery</button>
+              </div>
+            </div>
+            <div class="experience-card">
+              <div class="experience-image">
+                <picture>
+                  <source srcset="images/IMG_2051.webp" type="image/webp" />
+                  <img src="images/IMG_2051.jpeg" alt="Sauna" loading="lazy" />
+                </picture>
+              </div>
+              <div class="experience-content">
+                <p class="experience-label">EXPERIENCE THE SAUNA</p>
+                <h3 class="experience-title">本格バレルサウナ</h3>
+                <p class="experience-description">
+                  北海道産の道南杉を使った本格バレルサウナ。バレルサウナの窓からもオーシャンビューの絶景を眺めることができます。水風呂や外気浴を楽しみながら景色も堪能できます。
+                </p>
+                <button class="experience-btn">More Info</button>
+              </div>
+            </div>
+            <div class="experience-card">
+              <div class="experience-image">
+                <picture>
+                  <source srcset="images/IMG_1928.webp" type="image/webp" />
+                  <img src="images/IMG_1928.jpeg" alt="Amenities" loading="lazy" />
+                </picture>
+              </div>
+              <div class="experience-content">
+                <p class="experience-label">EXPERIENCE THE COMFORT</p>
+                <h3 class="experience-title">充実のアメニティ</h3>
+                <p class="experience-description">
+                  長期滞在に必要なアメニティー類はもちろんの事、バルコニーでバーベキューを楽しむこともできます。
+                </p>
+                <button class="experience-btn">More Info</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gallery Section 2 -->
+        <section class="gallery-section">
+          <div class="gallery-main-image">
+            <picture>
+              <source srcset="images/DSC00024.webp" type="image/webp" />
+              <img src="images/DSC00024.jpg" alt="Villa main view" loading="lazy" />
+            </picture>
+          </div>
+          <div class="gallery-carousel" id="gallery2">
+            <div class="carousel-slides">
+              <div class="carousel-slide">
+                <picture>
+                  <source srcset="images/DSC00003.webp" type="image/webp" />
+                  <img src="images/DSC00003.jpg" alt="Gallery image 1" loading="lazy" />
+                </picture>
+              </div>
+              <div class="carousel-slide">
+                <picture>
+                  <source srcset="images/DSC00025.webp" type="image/webp" />
+                  <img src="images/DSC00025.jpg" alt="Gallery image 2" loading="lazy" />
+                </picture>
+              </div>
+              <div class="carousel-slide">
+                <picture>
+                  <source srcset="images/DSC00197.webp" type="image/webp" />
+                  <img src="images/DSC00197.jpg" alt="Gallery image 3" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <!-- カルーセルナビゲーションボタンは現在無効化されています -->
+              <!--
+              <div class="gallery-navigation">
+                <button class="nav-btn prev-btn" id="gallery2-prev">
+                  SVGアイコンはJavaScriptで動的に挿入されます
+                </button>
+                <button class="nav-btn next-btn" id="gallery2-next">
+                  SVGアイコンはJavaScriptで動的に挿入されます
+                </button>
+              </div>
+              -->
+              <button class="view-gallery-btn">View Gallery</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer id="contact" class="footer">
+        <div class="footer-cta">
+          <div class="cta-content">
+            <h2 class="cta-title">特別な体験を予約しよう</h2>
+            <p class="cta-description">
+              このビラでしか体験できない時間を今すぐ予約しましょう。このサイトからの予約で5%引きになります。
+            </p>
+          </div>
+          <button class="cta-button-large">予約</button>
+        </div>
+        <div class="footer-bottom">
+          <p class="privacy-policy">Privacy Policy</p>
+          <p class="copyright">Copyright 2025,</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Mobile Fixed CTA Button -->
+    <div class="mobile-fixed-cta">
+      <button class="mobile-cta-button">Reserve Now</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
