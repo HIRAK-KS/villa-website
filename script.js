@@ -374,6 +374,48 @@ function insertSVGIcons() {
   */
 }
 
+// ページ読み込み時のフェードインアニメーション
+function initFadeInAnimation() {
+  // ページが完全に読み込まれた後にアニメーションを開始
+  window.addEventListener("load", function () {
+    // 少し遅延させてからアニメーション開始
+    setTimeout(() => {
+      const fadeElements = document.querySelectorAll(".fade-in");
+
+      // Intersection Observerを使用して要素が画面に入ったときにアニメーション
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        {
+          threshold: 0.1, // 要素の10%が見えたら発火
+          rootMargin: "0px 0px -50px 0px", // 少し早めに発火
+        }
+      );
+
+      // 各要素を監視
+      fadeElements.forEach((element) => {
+        observer.observe(element);
+      });
+
+      // 最初の要素は即座に表示（ヘッダーなど）
+      const firstElements = document.querySelectorAll(".fade-in-delay-1, .fade-in-delay-2");
+      firstElements.forEach((element) => {
+        setTimeout(() => {
+          element.classList.add("visible");
+        }, 100);
+      });
+    }, 300); // 300ms遅延
+  });
+}
+
+// ページ読み込み時のアニメーション初期化
+initFadeInAnimation();
+
 // Initialize everything when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
   // SVGアイコンを挿入
