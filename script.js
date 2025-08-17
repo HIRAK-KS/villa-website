@@ -407,9 +407,9 @@ function initFadeInAnimation() {
       firstElements.forEach((element) => {
         setTimeout(() => {
           element.classList.add("visible");
-        }, 100);
+        }, 50); // 50msに短縮
       });
-    }, 300); // 300ms遅延
+    }, 150); // 150msに短縮
   });
 }
 
